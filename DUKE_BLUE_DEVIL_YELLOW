@@ -1,0 +1,14 @@
+var img=new SimpleImage("duke_blue_devil.png");
+for(var im of img.values()){
+    if(im.getGreen()<255){
+        im.setRed(255);
+        im.setGreen(255);
+        im.setBlue(0);
+    }
+    else{
+        im.setRed(255);
+        im.setGreen(255);
+        im.setBlue(255);
+    }
+}
+print(img);
