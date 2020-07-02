@@ -1,0 +1,31 @@
+                                                                      METHOD-1
+
+
+function swapRedGreen(pixe){
+     var temp=pixe.getRed();
+    pixe.setRed(pixe.getGreen());
+    pixe.setGreen(temp);
+    
+    }
+ var img=new SimpleImage("chapel.png");
+ print(img);
+ for(var im of img.values()){
+     swapRedGreen(im);
+    
+ }
+ print(img);
+                                                                   METHOD-2
+function swapRedGreen (pixel) {
+    var G = pixel.getRed();
+    var R = pixel.getGreen();
+    pixel.setRed(R);
+    pixel.setGreen(G);
+}
+
+var img = new SimpleImage ("hippieflower.jpg");
+img.setSize (200, 200)
+print (img);
+for (var pixel of img.values()) {
+    swapRedGreen(pixel)
+}
+print (img);
