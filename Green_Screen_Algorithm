@@ -1,0 +1,28 @@
+
+var im1=new SimpleImage("drewRobert.png");
+
+var im2=new SimpleImage("dinos.png");
+
+
+var im3=new SimpleImage(im1.getWidth(),im1.getHeight());
+
+for(var pixel of im1.values()){
+    
+    if(pixel.getGreen()>250){
+        
+        var x=pixel.getX();
+        var y=pixel.getY();
+        var pix=im2.getPixel(x,y);
+    
+        im3.setPixel(x,y,pix);
+    }
+    else{
+         var x=pixel.getX();
+        var y=pixel.getY();
+        im3.setPixel(x,y,im1.getPixel(x,y));
+    }
+    
+    
+    
+}
+print(im3);
