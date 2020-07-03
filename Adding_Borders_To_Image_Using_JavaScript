@@ -1,0 +1,22 @@
+var image =new SimpleImage("smallpanda.png");
+var height=image.getHeight();
+var width=image.getWidth();
+
+for(var img of image.values()){
+    var x=img.getX();
+    var y=img.getY();
+    if(x<=10||x>=width-10){
+       setBlack(img);
+    }
+    if(y<=10||y>=height-10){
+       setBlack(img);
+    }
+}
+print(image);
+
+
+function setBlack(img){
+    img.setRed(0);
+    img.setGreen(0);
+    img.setBlue(0);
+}
